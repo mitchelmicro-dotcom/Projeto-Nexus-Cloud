@@ -1,0 +1,18 @@
+ /*CC Personalizado para complementar o Bootstrap*/
+body {
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth; 
+}
+
+/* Estilização do Hero section  (Primeira dobra)*/
+
+.hero-section {
+    background: linear-gradient(135deg, #0d6efd 0%, #003d99 100%);
+    color: white;
+    padding: 100px 0;
+    }
+
+/* Ajuste para a Navbar não cobrir o conteúdo ao clicar nos links */
+section {
+    padding-top: 80px; /* Altura da Navbar */
+}
