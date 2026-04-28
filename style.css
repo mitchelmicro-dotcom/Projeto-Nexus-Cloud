@@ -2,6 +2,7 @@
 body {
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth; 
+    padding-top: 56px; /* CORREÇÃO: Dá espaço para a navbar fixa não cobrir o título */
 }
 
 /* Estilização do Hero section  (Primeira dobra)*/
