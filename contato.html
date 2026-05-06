@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Cloud | Contato</title>
+
+    <!-- 1. LINK DO BOOTSTRAP (Obrigatório em todas as páginas que usam Bootstrap) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- 2. LINK DAS FONTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- 3. SEU CSS PERSONALIZADO -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Recomendo copiar a sua <nav> aqui também para o usuário poder voltar para a home -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">NEXUS CLOUD ☁️</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuPrincipal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Recursos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#precos">Preços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="contato" class="py-5 bg-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2 class="fw-bold">Fale com um Especialista Cloud</h2>
+                    <p class="text-muted">Dúvidas sobre virtualização ou migração? Nossa equipe técnica está pronta para ajudar.</p>
+                </div>
+            </div>
+
+            <div class="row g-5">
+                <!-- Informações de Contato -->
+                <div class="col-lg-4">
+                    <div class="mb-4">
+                        <h5 class="fw-bold text-primary">Suporte Técnico</h5>
+                        <p class="text-muted small">Disponível 24/7 para clientes de instâncias dedicadas.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="fw-bold text-primary">Vendas</h5>
+                        <p class="text-muted small">projetos@nexuscloud.com.br</p>
+                    </div>
+                </div>
+
+                <!-- Formulário -->
+                <div class="col-lg-8">
+                    <form class="row g-3 shadow-sm p-4 rounded-4 border bg-light">
+                        <div class="col-md-6">
+                            <label class="form-label small fw-bold">Nome</label>
+                            <input type="text" class="form-control" placeholder="Seu nome">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label small fw-bold">E-mail Corporativo</label>
+                            <input type="email" class="form-control" placeholder="nome@empresa.com">
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label small fw-bold">Assunto</label>
+                            <select class="form-select">
+                                <option selected>Consultoria de Infraestrutura</option>
+                                <option value="1">Migração de Servidor</option>
+                                <option value="2">Suporte Técnico</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="form-label small fw-bold">Mensagem</label>
+                            <textarea class="form-control" rows="4" placeholder="Descreva sua dúvida técnica"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-lg w-100 shadow-sm mt-2">Enviar Solicitação</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SCRIPT DO BOOTSTRAP (Sempre antes de fechar o body) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

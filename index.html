@@ -27,7 +27,7 @@
                             <a class="nav-link" href="#precos">Preços</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contato">Contato</a>
+                            <a class="nav-link" href="contato.html">Contato</a>
                         </li>
                     </ul>
                 </div>
@@ -61,59 +61,131 @@
         <!-- bg-light: Aplica um cinza bem claro para destacar do fundo azul da Hero -->
         <!-- py-5: Aplica preenchimento (padding) vertical para as bordas não ficarem coladas -->
 
-        <section id="features" class="py-5 bg-light"><!--Inicio da seção de recursos-->
+        <!-- SEÇÃO DE RECURSOS COM TODAS AS GAVETAS CONFIGURADAS -->
+        <section id="features" class="py-5 bg-light">
             <div class="container">
-
-                <!--Título centralizado-->
                 <div class="text-center mb-5">
-                    <h2 class="fw-bold">Tecnologia de Virtualização de Ponta</h2>
-                    <p>Infraestrutura projetada para desenvolvedores que não aceitam gargalos.</p>
+                    <h2 class="fw-bold">Infraestrutura sob o Capô</h2>
+                    <p class="text-muted">Explore a tecnologia que sustenta nossa nuvem.</p>
                 </div>
 
-                <!-- row: Linha que conterá as colunas de recursos -->
-                <!-- g-4: Adiciona um espaçamento (gutter) equilibrado entre os cards -->
-
-                <div class="row g-4">
-
-                    <!--Recurso 1: Virtualização -->
-                    <div class="col-md-4">
-                        <div class="card h-100 border-0 shadow-sm p-4 text-center">
-                            <div class="fs-1 mb-3 text-primary">☁️</div>
-                            <h5 class="fw-bold">KVM Isolation</h5>
-                            <p class="text-muted small">Recursos 100% dedicados com virtualização a nível de kernel. Sem "vizinhos barulhentos" afetando sua performance.</p>
-                        </div>                        
-                    </div> 
+                <!-- Início do Accordion -->
+                <div class="accordion border-0" id="cloudTechAccordion">
                     
-                    <!--Recurso 2: Performance -->
-                    <div class="col-md-4">
-                        <div class="card border-0 shadow-sm p-4 text-center">
-                            <div class="fs-1 mb-3 text-primary">🚀</div>
-                            <h5 class="fw-bold">NVMe Storage</h5>
-                            <p class="text-muted small">Leitura e escrita de dados ultra rápida para bancos de dados complexos e APIs de alta demanda.</p> 
-                        
-                        <div class="text-center">
-                            <button class="btn btn-primary mt-3" onclick="window.location.href='saiba_mais.html'">
-                                Saiba Mais
-                            </button>
+                    <div class="row g-4">
+                        <!-- CARD KVM -->
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm p-4 text-center">
+                                <div class="fs-1 mb-3">☁️</div>
+                                <h4 class="fw-bold">KVM Isolation</h4>
+                                <button class="btn btn-primary w-100 mt-3" data-bs-toggle="collapse" data-bs-target="#infoKVM">
+                                    Especificações
+                                </button>
+                            </div>
                         </div>
-                        
+
+                        <!-- CARD NVMe -->
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm p-4 text-center">
+                                <div class="fs-1 mb-3">🚀</div>
+                                <h4 class="fw-bold">NVMe Storage</h4>
+                                <button class="btn btn-primary w-100 mt-3" data-bs-toggle="collapse" data-bs-target="#infoNVMe">
+                                    Especificações
+                                </button>
+                            </div>
                         </div>
-                        
-                        
+
+                        <!-- CARD REDE -->
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0 shadow-sm p-4 text-center">
+                                <div class="fs-1 mb-3">🌐</div>
+                                <h4 class="fw-bold">Rede Anycast</h4>
+                                <button class="btn btn-primary w-100 mt-3" data-bs-toggle="collapse" data-bs-target="#infoRede">
+                                    Especificações
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
-                    <!--Recurso 3: Rede -->
-                    <div class="col-md-4">
-                        <div class="card h-100 border-0 shadow-sm p-4 text-center">
-                            <div class="fs-1 mb-3 text-primary">🌐</div>
-                            <h5 class="fw-bold">Rede Anycast</h5>
-                            <p class="text-muted small">Baixa latência global. Sua aplicação respondendo rápido de qualquer lugar do mundo.</p> 
+                    <!-- GAVETA 1: KVM -->
+                    <div id="infoKVM" class="collapse mt-4" data-bs-parent="#cloudTechAccordion">
+                        <div class="details-drawer p-5">
+                            <div class="row align-items-center">
+                                <div class="col-lg-7">
+                                    <h2 class="fw-bold mb-4 text-primary">Virtualização KVM Dedicada</h2>
+                                    <p class="mb-4">Diferente da virtualização compartilhada, o KVM permite que você tenha um Kernel próprio e recursos de hardware 100% isolados, garantindo segurança e performance previsível.</p>
+                                    <ul class="list-unstyled">
+                                        <li class="py-2 border-bottom">✅ <strong>CPU Pinning:</strong> Processamento sem compartilhamento.</li>
+                                        <li class="py-2 border-bottom">✅ <strong>RAM Reservada:</strong> Sem Swap forçado por outros usuários.</li>
+                                        <li class="py-2">✅ <strong>VNC Access:</strong> Console remoto direto na BIOS da instância.</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 offset-lg-1 text-center bg-light p-5 rounded-4 shadow-sm">
+                                    <p class="text-muted text-uppercase small fw-bold">Instância Micro a partir de</p>
+                                    <div class="price-tag mb-4">R$ 49,90<span class="fs-6 text-muted">/mês</span></div>
+                                    <button class="btn btn-primary btn-lg w-100 mb-2 shadow">Provisionar KVM</button>
+                                    <button class="btn btn-link text-danger text-decoration-none" data-bs-toggle="collapse" data-bs-target="#infoKVM">Fechar</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+
+                    <!-- GAVETA 2: NVMe -->
+                    <div id="infoNVMe" class="collapse mt-4" data-bs-parent="#cloudTechAccordion">
+                        <div class="details-drawer p-5">
+                            <div class="row align-items-center">
+                                <div class="col-lg-7">
+                                    <h2 class="fw-bold mb-4 text-primary">Armazenamento NVMe Gen4</h2>
+                                    <p class="mb-4">Operamos com discos NVMe Enterprise. Isso significa que seu banco de dados e arquivos carregam em uma fração do tempo de SSDs convencionais.</p>
+                                    <table class="table tech-spec-table w-100">
+                                        <tr>
+                                            <td class="py-3 fw-bold text-secondary">Velocidade de Leitura</td>
+                                            <td class="py-3 text-end text-success fw-bold">7.500 MB/s</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-3 fw-bold text-secondary">Escrita Aleatória</td>
+                                            <td class="py-3 text-end fw-bold">1.2M IOPS</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-lg-4 offset-lg-1 text-center bg-light p-5 rounded-4 shadow-sm">
+                                    <p class="text-muted text-uppercase small fw-bold">Upgrade de disco a partir de</p>
+                                    <div class="price-tag mb-4">R$ 19,90<span class="fs-6 text-muted">/mês</span></div>
+                                    <button class="btn btn-primary btn-lg w-100 mb-2 shadow">Adicionar Disco</button>
+                                    <button class="btn btn-link text-danger text-decoration-none" data-bs-toggle="collapse" data-bs-target="#infoNVMe">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- GAVETA 3: REDE -->
+                    <div id="infoRede" class="collapse mt-4" data-bs-parent="#cloudTechAccordion">
+                        <div class="details-drawer p-5">
+                            <div class="row align-items-center">
+                                <div class="col-lg-7">
+                                    <h2 class="fw-bold mb-4 text-primary">Rede Global Anycast</h2>
+                                    <p class="mb-4">Utilizamos roteamento Anycast para direcionar o tráfego do seu cliente para o nó mais próximo, reduzindo o TTFB (Time to First Byte) drasticamente.</p>
+                                    <ul class="list-unstyled">
+                                        <li class="py-2 border-bottom">🌍 <strong>Latência Global:</strong> Média de 20ms nos grandes centros.</li>
+                                        <li class="py-2 border-bottom">🛡️ <strong>DDoS Protection:</strong> 2Tbps de mitigação ativa.</li>
+                                        <li class="py-2">🚀 <strong>Porta de 10Gbps:</strong> Uplink de alta velocidade.</li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-4 offset-lg-1 text-center bg-light p-5 rounded-4 shadow-sm">
+                                    <p class="text-muted text-uppercase small fw-bold">Tráfego extra a partir de</p>
+                                    <div class="price-tag mb-4">R$ 0,05<span class="fs-6 text-muted">/GB</span></div>
+                                    <button class="btn btn-primary btn-lg w-100 mb-2 shadow">Ver Mapa de Rede</button>
+                                    <button class="btn btn-link text-danger text-decoration-none" data-bs-toggle="collapse" data-bs-target="#infoRede">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- Fim Accordion -->
             </div>
         </section>
 
+        
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     

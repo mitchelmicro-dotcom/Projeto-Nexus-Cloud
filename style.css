@@ -17,3 +17,35 @@ body {
 section {
     padding-top: 80px; /* Altura da Navbar */
 }
+
+/* style.css - Adicione ao final */
+
+/* Controla a velocidade da "sanfona" para ser mais lenta e elegante */
+.collapsing {
+    transition: height 0.8s ease-in-out !important;
+}
+
+/* Estilo do painel de detalhes (Gaveta) */
+.details-drawer {
+    background: #ffffff;
+    border: 1px solid rgba(13, 110, 253, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Tabela técnica dentro da gaveta */
+.tech-spec-table {
+    font-size: 0.95rem;
+    color: #495057;
+}
+
+.tech-spec-table tr {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.price-tag {
+    font-size: 2rem;
+    color: #0d6efd;
+    font-weight: 700;
+}
